@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - La Sazón de Nicolasa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #e74c3c;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        header .logo h1 {
+            font-size: 2.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline-block;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #f39c12;
+        }
+
+        section {
+            margin: 20px;
+        }
+
+        section h2 {
+            font-size: 1.8rem;
+            color: #e74c3c;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        section ul li {
+            background-color: #fff;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+
+        section ul li:hover {
+            background-color: #f39c12;
+            color: white;
+        }
+
+        footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>La Sazón de Nicolasa</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#entradas">Entradas</a></li>
+                <li><a href="#platos">Platos principales</a></li>
+                <li><a href="#postres">Postres</a></li>
+                <li><a href="#bebidas">Bebidas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="entradas">
+        <h2>Entradas</h2>
+        <ul>
+            <li>Ensalada Caprese - $5.00</li>
+            <li>Sopa de Ajo - $4.50</li>
+            <li>Bruschetta - $6.00</li>
+        </ul>
+    </section>
+
+    <section id="platos">
+        <h2>Platos Principales</h2>
+        <ul>
+            <li>Paella Valenciana - $15.00</li>
+            <li>Lasagna de Carne - $12.00</li>
+            <li>Pollo a la Parrilla - $10.00</li>
+        </ul>
+    </section>
+
+    <section id="postres">
+        <h2>Postres</h2>
+        <ul>
+            <li>Tiramisú - $5.50</li>
+            <li>Helado Artesanal - $4.00</li>
+            <li>Pastel de Chocolate - $6.00</li>
+        </ul>
+    </section>
+
+    <section id="bebidas">
+        <h2>Bebidas</h2>
+        <ul>
+            <li>Vino tinto - $7.00</li>
+            <li>Cerveza artesanal - $5.00</li>
+            <li>Agua mineral - $2.00</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 La Sazón de Nicolasa | Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const items = document.querySelectorAll('section ul li');
+            items.forEach(item => {
+                item.addEventListener('click', function() {
+                    alert('Has seleccionado: ' + item.textContent);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
